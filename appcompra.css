@@ -4,6 +4,13 @@
     padding: 0.05rem;
 }
 
+:root {
+    /*piniendo dos quiones y el nombre que quieras se pueden definir los colores de una web en una sola etiqueta,siendo más fácil para cambiar 
+    toda la paleta de colores en un futuro,OOOOJJJJOOOO mirar como hay que indicar el color en la etiqueta del elemento*/
+    --primario: gray;
+    --secundario: rgba(128, 128, 128, 0.5);
+}
+
 .barramenu {
     position: sticky;
     height: 15%;
@@ -32,8 +39,10 @@
 
 .listado {
     display: flex;
-    height: 300px;
-    background-color: rgba(128, 128, 128, 0.5);
+    height: 650px;
+    /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
+    en la etiqueta principal*/
+    background-color: var(--secundario);
     border: 1px solid black;
     justify-content: center;
     align-items: center;
@@ -44,7 +53,7 @@
     display: flex;
     height: 10%;
     width: 20%;
-    background-color: gray;
+    background-color: var(--primario);
     border: 1px solid black;
     justify-content: center;
     align-content: center;
@@ -143,15 +152,41 @@
     width: 75%;
     height: 65%;
     top: 1%;
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
     left: 3rem;
+    justify-content: center;
+   align-items: center;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: gray;
+    background-color: var(--primario);
 }
 
-#botoncheck { 
+#formprod label {
+    width: 100%;
+    height: 5%;
     
+}
+#formprod h3{
+    text-align: center;
+}
+
+#formprod input[type='radio'] {
+    width: 22%;
+    
+    
+}
+
+#formprod label[class="labelradio"] {
+    width: 23%;
+    height: 10%;
+    justify-content: space-around;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+#botoncheck {
     position: absolute;
     width: 3rem;
     height: 3rem;
