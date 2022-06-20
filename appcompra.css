@@ -1,7 +1,7 @@
 * {
     animation-name: animelogo;
     animation-duration: 1s;
-    padding: 0.05rem;
+     
 }
 
 :root {
@@ -20,6 +20,7 @@
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    box-shadow:0px 2px 2px rgba(0, 0, 0,0.5);
 }
 
 .botonmenu {
@@ -146,29 +147,47 @@
         opacity: 1;
     }
 }
+#modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128,0.7);
 
+}
 #formprod {
-    position: absolute;
+    position: relative;
     width: 75%;
-    height: 65%;
-    top: 1%;
+    height: 95%;
     display: flex;
     flex-wrap: wrap;
-    left: 3rem;
+   
     justify-content: center;
-   align-items: center;
+    align-items: center;
     border: 1px solid black;
     border-radius: 10px;
     background-color: var(--primario);
+    margin: 0%;
+    padding: 0%;
 }
 
 #formprod label {
     width: 100%;
-    height: 5%;
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
-#formprod h3{
+#formprod h2{
     text-align: center;
+    margin-bottom: 0%;
+    margin-top: 0%;
 }
 
 #formprod input[type='radio'] {
@@ -179,10 +198,11 @@
 
 #formprod label[class="labelradio"] {
     width: 23%;
-    height: 10%;
+    height: 6%;
     justify-content: space-around;
     text-align: center;
     border: 1px solid black;
+    padding: 0%;
 }
 
 
@@ -200,4 +220,9 @@
     height: 3rem;
     bottom: 0%;
     right: 0%;
+}
+#textarea{
+    width: 80%;
+    height: 20%;
+    margin-bottom: 2.5rem;
 }

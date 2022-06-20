@@ -1,10 +1,10 @@
 function muestraForm() {
-    let divgost=document.getElementById('formprod')
+    let divgost=document.getElementById('modal')
     divgost.style.display="flex"
 }
 function cierraForm() {
 
-    let divgost=document.getElementById('formprod')
+    let divgost=document.getElementById('modal')
     divgost.style.display="none"
 }
 /*
