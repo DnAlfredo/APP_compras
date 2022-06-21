@@ -1,4 +1,3 @@
-
 :root {
     /*piniendo dos quiones y el nombre que quieras se pueden definir los colores de una web en una sola etiqueta,siendo más fácil para cambiar 
     toda la paleta de colores en un futuro,OOOOJJJJOOOO mirar como hay que indicar el color en la etiqueta del elemento*/
@@ -7,7 +6,6 @@
 }
 
 .barramenu {
-
     position: sticky;
     height: 15%;
     display: block;
@@ -19,7 +17,7 @@
     animation-name: animelogo;
     animation-duration: 1s;
     border-radius: 10px;
-    box-shadow:0px 2px 2px rgba(0, 0, 0,0.5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .botonmenu {
@@ -27,69 +25,80 @@
     right: 0.05rem;
     bottom: 0px;
     display: flex;
-
-
 }
 
 .pngmenu {
     display: flex;
-
     width: 3rem;
 }
 
 .listado {
-    display: block;
-    height: 650px;
+
+    height: 100%;
     /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
     en la etiqueta principal*/
     background-color: var(--secundario);
     border: 1px solid black;
-  
     animation-name: animelogo;
     animation-duration: 1s;
     border-radius: 10px;
-   
-}
-.listatienda{
 
+}
+.txtlista {
+    font-size: xx-large;
+}
+
+.listatienda {
+    display: inline-block;
     width: 95%;
-    display: block;
+
     border: 1px solid black;
     background-color: gainsboro;
- margin: auto;
-     margin-top: 1rem;
-     border-radius: 10px;
-     box-shadow: 0 2px 2px black;
-     
+    margin: auto;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 2px black;
+
 }
 
-.botonlista{
+
+.botonlista {
     width: 2.5rem;
     margin: 0.5rem;
-    
-}
-.divcheck{
-    width: 3rem;
-    height: 3rem;
-    background-color: rgba(128, 128, 128,0.4);
-    border: 1px solid black;
 
 }
-.cuerpolista{
-    
-    display: block;
-   text-align:justify;
+
+.divcheck {
+    width: 2rem;
+    height: 2rem;
+    /*transform: scale(2);*/
+
 }
-.titulotienda{
+
+.cuerpolista {
+
+    display: block;
+    text-align: justify;
+}
+
+.titulotienda {
     text-align: center;
 }
-#desplupa{
-    width: 75%;
-     display:none;
-     border: 1px solid black;
-     border-radius: 10px;
-     background-color: rgba(128, 128, 128,0.4);
-   
+.botones{
+    width: 35%;
+    height: auto;
+    margin-left: 2rem;
+}
+
+#desplupa {
+    width: 85%;
+    display: none;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.4);
+
+
 }
 
 
@@ -100,7 +109,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    border-radius: 10px; 
+    border-radius: 10px;
     animation-name: animelogo;
     animation-duration: 1s;
     background-color: var(--primario);
@@ -192,7 +201,8 @@
         opacity: 1;
     }
 }
-#modal{
+
+#modal {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -202,16 +212,17 @@
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(128, 128, 128,0.7);
+    background-color: rgba(128, 128, 128, 0.7);
 
 }
+
 #formprod {
     position: relative;
     width: 75%;
-    height: 95%;
+    max-height: 30rem;
     display: flex;
     flex-wrap: wrap;
-   
+
     justify-content: center;
     align-items: center;
     border: 1px solid black;
@@ -227,9 +238,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-#formprod h2{
+
+#formprod h2 {
     text-align: center;
     margin-bottom: 0%;
     margin-top: 0%;
@@ -237,8 +249,8 @@
 
 #formprod input[type='radio'] {
     width: 22%;
-    
-    
+
+
 }
 
 #formprod label[class="labelradio"] {
@@ -266,9 +278,10 @@
     bottom: 0%;
     right: 0%;
 }
-#textarea{
+
+#textarea {
     width: 80%;
     height: 20%;
     margin-bottom: 2.5rem;
-   
+
 }
