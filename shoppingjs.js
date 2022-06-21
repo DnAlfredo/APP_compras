@@ -2,10 +2,18 @@ function muestraForm() {
     let divgost=document.getElementById('modal')
     divgost.style.display="flex"
 }
+function muestraLupa() {
+    let divgoster=document.getElementById('desplupa')
+    divgoster.style.display="flex"
+}
 function cierraForm() {
 
     let divgost=document.getElementById('modal')
     divgost.style.display="none"
+}
+function cierraLupa(){
+    let divgoster=document.getElementById('desplupa')
+    divgoster.style.display="none"
 }
 /*
 function muestraCantidad() {
