@@ -56,8 +56,8 @@
     padding: 1vh;
 }
 #despmenu > img{
-    width: 1rem;
-    height: 1rem;  
+    width: 2rem;
+    height: 2rem;  
     padding: 1vh;
     right: 0%;
     bottom: 0%;
@@ -124,9 +124,10 @@
 
 .botones {
     width: 35%;
-
 }
-
+.botonlista{
+    width: 2rem;
+}
 #desplupa {
    width: 100%;
     position: relative;
