@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./multimedia/imgabs3.webp">
-    <!--<link rel="stylesheet" href="./appcompra.css">-->
-    <link rel="stylesheet" href="./nuevocss.css">
+    <link rel="stylesheet" href="./appcompra.css" id="cssdrag">
+    <!--<link rel="stylesheet" href="./nuevocss.css">-->
     <script src="./shoppingjs.js"></script>
 
     <title>ShoppingList</title>
@@ -17,8 +17,17 @@
     <header>
         <div class="barramenu">
             <h1 class="titulo">SHOPPING LIST</h1><br>
-            <div class="botonmenu"><img src="./multimedia/menu_FILL0_wght400_GRAD0_opsz48.png" alt="" class="pngmenu">
+            <div class="botonmenu" onclick="muestraMenu()"><img src="./multimedia/menu_FILL0_wght400_GRAD0_opsz48.png"
+                    alt="" class="pngmenu">
+
             </div>
+        </div>
+       
+        <div id="despmenu">
+            <span onclick="cambiaInterfaz()"class="botondesp">Cálido</span>
+            <span onclick="cambiaColores()"class="botondesp">Industrial</span>
+            <img src="./multimedia/cancel_FILL0_wght400_GRAD0_opsz48.png" alt="" 
+                onclick="cierraMenu()">
         </div>
     </header>
     <main>
@@ -122,7 +131,7 @@
 
     </main>
     <footer>
-        <div class="introducir" >
+        <div class="introducir">
             <div class="botonmas"><img src="./multimedia/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""
                     onclick="muestraForm()"></div>
         </div>
@@ -151,7 +160,7 @@
                     <option value="simago">Simago</option>
                 </select>
                 <label for="comentarios">Comentarios:</label>
-                <textarea name="comentarios" rows="10" cols="20" id="textarea">Comentarios...</textarea>
+                <textarea name="comentarios" rows="10" cols="20" id="textarea"placeholder="Comentarios..."></textarea>
                 <img src="./multimedia/check_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botoncheck">
                 <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botonvisible"
                     onclick=cierraForm()>

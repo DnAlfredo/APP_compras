@@ -28,4 +28,20 @@ function muestraCantidad(idleer,idmostrar){
     let cantidad = document.getElementById(idleer).value;
     document.getElementById(idmostrar).innerHTML = cantidad;
 }
-
+function muestraMenu() {
+    let divmen=document.getElementById('despmenu')
+    divmen.style.display="flex"
+}
+function cierraMenu() {
+    let divmenu=document.getElementById('despmenu')
+    divmenu.style.display="none"
+}
+function cambiaInterfaz() {
+ document.getElementById("cssdrag").href="./nuevocss.css"
+ 
+        
+ 
+}
+function cambiaColores() {
+    document.getElementById("cssdrag").href="./appcompra.css" 
+}

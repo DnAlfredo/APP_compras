@@ -2,7 +2,11 @@
     /*piniendo dos quiones y el nombre que quieras se pueden definir los colores de una web en una sola etiqueta,siendo más fácil para cambiar 
     toda la paleta de colores en un futuro,OOOOJJJJOOOO mirar como hay que indicar el color en la etiqueta del elemento*/
     --primario: gray;
-    --secundario: rgba(128, 128, 128, 0.5);
+    --secundario: rgba(128, 128, 128, 0.7);
+    --terciario:rgba(128, 128, 128,0.1);
+    --borde:black;
+    --sombra:rgba(0, 0, 0, 0.5);
+    --ficha:gainsboro;
 }
 
 .barramenu {
@@ -10,14 +14,14 @@
     height: 15%;
     display: block;
     background-color: gray;
-    border: 1px solid black;
+    border: 1px solid var(--borde);
     justify-content: center;
     text-align: center;
     margin-bottom: 0.5rem;
     animation-name: animelogo;
     animation-duration: 1s;
     border-radius: 10px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 2px var(--sombra) ;
 }
 
 .botonmenu {
@@ -31,7 +35,38 @@
     display: flex;
     width: 3rem;
 }
-
+#despmenu{
+    width: 95%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   align-items: center;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+    margin-bottom: 1vh; 
+    
+}
+.botondesp{
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);   
+    font-size: x-large;
+    padding: 1vh;
+}
+#despmenu > img{
+   
+    width: 1rem;
+    height: 1rem;  
+    padding: 1vh;
+   
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);   
+    font-size: x-large;
+  
+}
 .listado {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +75,7 @@
     /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
     en la etiqueta principal*/
     background-color: var(--secundario);
-    border: 1px solid black;
+    border: 1px solid var(--borde);
     animation-name: animelogo;
     animation-duration: 1s;
     border-radius: 10px;
@@ -48,18 +83,26 @@
 
 }
 .textlista{    
-    width: 35%;
-
+    width: 100%;
+    position: relative;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+   right: 2rem;
 }
 
 .listatienda {
     display: inline-block;
     width: 95%;
-    border: 1px solid black;
-    background-color: gainsboro;
+    border: 1px solid var(--borde);
+    background-color:var(--ficha) ;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0 2px 2px black;
+    box-shadow: 0 2px 2px var(--sombra);
 }
 
 
@@ -99,9 +142,9 @@
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 1px solid var(--borde);
     border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.4);
+    background-color: var(--secundario);
     padding: 0.5rem;
    right: 2rem;
 }
@@ -116,7 +159,7 @@
     animation-name: animelogo;
     animation-duration: 1s;
     background-color: var(--primario);
-    border: 1px solid black;
+    border: 1px solid var(--borde);
 }
 
 @keyframes animelogo {
@@ -222,19 +265,19 @@ footer {
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.7);
+    background-color: var(--secundario);
 
 }
 
 #formprod {
     position: relative;
     width: 75%;
-    max-height: 30rem;
+    max-height: 85vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid var(--borde);
     border-radius: 10px;
     background-color: var(--primario);
     margin: 0%;
@@ -267,7 +310,7 @@ footer {
     height: 6%;
     justify-content: space-around;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--borde);
     padding: 0%;
 }
 
@@ -290,7 +333,7 @@ footer {
 
 #textarea {
     width: 80%;
-    height: 20%;
+    max-height: 15vh;
     margin-bottom: 2.5rem;
 
 }
