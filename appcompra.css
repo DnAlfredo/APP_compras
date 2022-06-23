@@ -34,7 +34,7 @@
 
 .pngmenu {
     display: flex;
-    width: 3rem;
+    width: 10vw;
 }
 #despmenu{
     width: 90%;
@@ -85,6 +85,7 @@
 }
 .textlista{    
     width: 35%;
+    
 }
 
 .listatienda {
@@ -127,11 +128,11 @@
     width: 35%;
 }
 .botonlista{
-    width: 2rem;
+    width: 9vw;
 }
 #desplupa {
-   width: 100%;
-    position: relative;
+   width: 90%;
+   
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -139,7 +140,8 @@
     border-radius: 10px;
     background-color: var(--secundario);
     padding: 0.5rem;
-   right: 2rem;
+   margin: 1vh;
+   z-index: 2;
 }
 .introducir {
     display: flex;

@@ -25,7 +25,7 @@
     animation-name: animelogo;
     animation-duration: 1s;
   
-    box-shadow: 0px 2px 2px var(--sombra);
+    box-shadow: 0 0.5vh 0.5vh var(--sombra);
 }
 
 .botonmenu {
@@ -37,7 +37,7 @@
 }
 .pngmenu {
     display: flex;
-    width: 3rem;
+    width: 10vw;
 }
 #despmenu{
     width: 97%;
@@ -53,7 +53,7 @@
     background-color: var(--secundario);
     font-size: x-large;
     padding: 1vh;
-    border: 1px solid var(--borde);
+    box-shadow: 0px 0.5vh 0.5vh var(--sombra);
       border-radius: 5px;
 }
 #despmenu > img{
@@ -62,7 +62,7 @@
     padding: 1vh;
     background-color: var(--secundario);   
     font-size: x-large;
-    border: 1px solid var(--borde);
+    box-shadow: 0px 0.5vh 0.5vh var(--sombra);
     border-radius: 5px;
 }
 
@@ -94,7 +94,7 @@
     background-color: var(--ficha);
     align-items: center;
     border-radius: 5px;
-    box-shadow: 0 2px 2px var(--sombra);
+    box-shadow: 0 0.5vh 0.5vh var(--sombra);
 }
 
 
@@ -129,19 +129,26 @@
 }
 .botonlista{
     width: 2rem;
+     
 }
 
 #desplupa {
-   width: 100%;
-    position: relative;
+    width: 100%;
+   
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid var(--borde);
-    border-radius: 10px;
-    background-color: var(--primario);
+    border:0px 0px 1px solid var(--borde);
+    box-shadow:0vh  0.5vh 0.5vh var(--sombra);
+    background-color: var(--secundario);
     padding: 0.5rem;
-   right: 2rem;
+  
+   z-index: 2;
+}
+#desplupa img{
+    background-color: var(--secundario);
+    box-shadow: 0 0.5vh 0.5vh var(--sombra);
+    border-radius: 5px;
 }
 .introducir {
     display: flex;
@@ -151,9 +158,7 @@
     align-content: center;
     align-items: center;
     border-radius: 5px;
-    
-    
-    
+    box-shadow: 0vh 0.5vh 0.5vh var(--sombra); 
 }
 
 @keyframes animelogo {
