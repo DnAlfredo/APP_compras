@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div id="despmenu">
+        <div id="despmenu"class="esconder">
             <span onclick="cambiaInterfaz()" class="botondesp">Cálido</span>
             <span onclick="cambiaColores()" class="botondesp">Industrial</span>
             <img src="./multimedia/cancel_FILL0_wght400_GRAD0_opsz48.png" alt="" onclick="cierraMenu()">
@@ -47,7 +47,7 @@
                                 alt="simbolo de borrar" class="botonlista">
 
                         </div>
-                        <div id="desplupa">
+                        <div id="desplupa"class="esconder">
                             <span>Cantidad: 35 Kg</span>
                             <span>Comentarios: blabla mecmec toctoc</span>
                             <img src="./multimedia/cancel_FILL0_wght400_GRAD0_opsz48.png" alt="" class="botonlista"
@@ -138,9 +138,9 @@
             <div id="formprod">
                 <h2>Registro</h2>
                 <label for="producto">Indica el nombre del alimento a listar:</label>
-                <input type="text" name="producto" placeholder="Nombre del producto...">
+                <input type="text" name="producto" placeholder="Nombre del producto..."id="nombre">
                 <label for="cantidad">Cantidad:</label>
-                <input type="range" min="0" max="50" id="cantidad" oninput="muestraCantidad('cantidad','mostrador')">
+                <input type="range" min="0" max="50" id="cantidad" oninput="muestraCantidad('cantidad','mostrador')"value="0">
                 <span id="mostrador"></span>
                 <label for="unidades">Marca la unidad de medida:</label>
                 <input type="radio" id="litros" name="unidades" value="litros">
@@ -152,7 +152,8 @@
                 <label for="gr" class="labelradio">gr</label>
                 <label for="ud" class="labelradio">ud.</label>
                 <label for="tienda">Selecciona una tienda:</label>
-                <select id="tienda" name="tienda">
+                <select id="tienda" name="tienda"id="tienda">
+                    <option value="Tienda">Tienda..</option>
                     <option value="amica">Amica</option>
                     <option value="espar">Espar</option>
                     <option value="continente">Contiente</option>
@@ -160,7 +161,7 @@
                 </select>
                 <label for="comentarios">Comentarios:</label>
                 <textarea name="comentarios" rows="10" cols="20" id="textarea" placeholder="Comentarios..."></textarea>
-                <img src="./multimedia/check_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botoncheck">
+                <img src="./multimedia/check_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botoncheck"onclick="validarDatos()">
                 <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botonvisible"
                     onclick=cierraForm()>
 
