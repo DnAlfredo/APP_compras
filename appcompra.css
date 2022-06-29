@@ -37,7 +37,7 @@
     width: 2rem;
 }
 #despmenu{
-    width: 90%;
+    width: 92%;
     
     flex-wrap: wrap;
     justify-content: space-around;
@@ -76,6 +76,7 @@
     flex-wrap: wrap;
     justify-content: center;
     height: 100%;
+    min-height: 70vh;
     /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
     en la etiqueta principal*/
     background-color: var(--secundario);

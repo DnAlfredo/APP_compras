@@ -14,6 +14,7 @@
 }
 .mostrar {
     display: flex;
+    justify-content: space-around;
 }
 
 .esconder {
@@ -55,6 +56,8 @@
     padding: 0.5rem;
     margin-bottom: 1vh; 
     font-size: x-large;
+    animation-name: animelogo;
+    animation-duration: 1s;
 }
 .botondesp{
     background-color: var(--secundario);
@@ -62,6 +65,7 @@
     padding: 1vh;
     box-shadow: 0px 0.5vh 0.5vh var(--sombra);
       border-radius: 5px;
+
 }
 #despmenu > img{
     position: relative;
@@ -81,6 +85,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    min-height: 70vh;
     height: 100%;
     /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
     en la etiqueta principal*/
@@ -145,8 +150,6 @@
 
 #desplupa {
     width: 100%;
-   
-    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     border:0px 0px 1px solid var(--borde);

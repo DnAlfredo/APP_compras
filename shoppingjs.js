@@ -49,31 +49,28 @@ function cambiaInterfaz() {
 function cambiaColores() {
     document.getElementById("cssdrag").href = "./appcompra.css"
 }
-/*
-function validarDatos() {
-   
-        campo_nombre = document.getElementById("nombre") 
-         campo_tratado = campo_nombre.value.trim() 
-        if (campo_tratado == "" || campo_tratado == null) {
-           
-            return false
-        } else {
-            document.getElementById('nombre').style.backgroundColor = "none" 
-        }
-        tienda = document.getElementById("tienda")
-        if (tienda.selectedIndex < 1) {
-            alert('ERROR:Campo tienda no valido.')
-        }
-        tienda = document.getElementsByName("unidades")
-        if (tienda==null) {
-            alert('falloen unidades')
-           return false  
-        }
-        cantidad=document.getElementById("cantidad") 
-        if(cantidad==0)
-        alert('cantidad erronea')
 
+let col_tienda;
+col_tienda = {
+    tienda: [
+        {nombre: "Amica"},
+        {nombre: "Espar"},
+        {nombre: "Simago"},
+        {nombre: "Continente"}
+    ]
 }
-function guardaDatos() {
-    
-}*/
+let select = document.getElementById('selecttienda')
+let opciones = " "
+opciones = `<option value="tienda">Tienda</option>`
+for (tienda of col_tienda.tienda) {
+    opciones += `<option value=${tienda.nombre}>${tienda.nombre}</option>`
+}
+//una vez hecha la estructura a insertar hay que hacer el inner para decirle que lo inserte
+select.innerHTML = opciones
+
+
+function validarDatos() {
+    let nom_prod = document.getElementById('nombre')
+    let textlista
+    textlista += `<span class="textlista">${nom_prod}</span>`
+}
