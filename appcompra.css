@@ -289,6 +289,27 @@ footer {
     margin: 0%;
     padding: 0%;
 }
+#añadirtienda{
+    width: 6vw;
+    height: 3vh;
+    background-color: var(--ficha);
+    border: 1px solid var(--borde);
+    border-radius:5px ;
+    text-align: center;
+    margin-right: 1vh;
+   
+}
+#desp_tienda{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+   margin: 1vh;
+   
+}
 
 #formprod label {
     width: 100%;

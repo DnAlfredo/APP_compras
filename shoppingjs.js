@@ -42,6 +42,12 @@ function cierraMenu() {
     muestraMenu()
 }
 
+function muestraAñadir() {
+    let divgoster = document.getElementById('desp_tienda')
+    divgoster.classList.toggle('esconder')
+    divgoster.classList.toggle('mostrar')
+}
+
 function cambiaInterfaz() {
     document.getElementById("cssdrag").href = "./nuevocss.css"
 }
@@ -52,25 +58,64 @@ function cambiaColores() {
 
 let col_tienda;
 col_tienda = {
-    tienda: [
-        {nombre: "Amica"},
-        {nombre: "Espar"},
-        {nombre: "Simago"},
-        {nombre: "Continente"}
+    tienda: [{
+            nombre: "Amica"
+        },
+        {
+            nombre: "Espar"
+        },
+        {
+            nombre: "Simago"
+        },
+        {
+            nombre: "Continente"
+        }
     ]
+
 }
-let select = document.getElementById('selecttienda')
-let opciones = " "
-opciones = `<option value="tienda">Tienda</option>`
-for (tienda of col_tienda.tienda) {
-    opciones += `<option value=${tienda.nombre}>${tienda.nombre}</option>`
+
+function rellenaSelect() {
+    let select = document.getElementById('selecttienda')
+    let opciones = " "
+    opciones = `<option value="tienda">Tienda</option>`
+    for (tienda of col_tienda.tienda) {
+        opciones += `<option value=${tienda.nombre}>${tienda.nombre}</option>`
+    }
+    //una vez hecha la estructura a insertar hay que hacer el inner para decirle que lo inserte
+    select.innerHTML = opciones
 }
-//una vez hecha la estructura a insertar hay que hacer el inner para decirle que lo inserte
-select.innerHTML = opciones
+
+function creaProducto() {
+    
+
+let nom_prod = document.getElementById('nombre').value
+let cantidad=document.getElementById('cantidad').value
+let unidades
+let col_radios=document.getElementsByName('unidades')
+for (radiobuttons of col_radios) {
+    if (radiobuttons.checked) {
+        unidades=radiobuttons.value
+    }
+}
+let tienda=document.getElementById('selecttienda').value
+let comentarios=document.getElementById('textarea').value
+ listado.productos.push(
+
+    {
+        nombre:nom_prod,
+        cantidad:cantidad,
+        unidades:unidades,
+        tienda:tienda,
+        comentarios:comentarios
+    }
+
+ )
+localStorage.setItem("listado",JSON.stringify(listado))
 
 
-function validarDatos() {
-    let nom_prod = document.getElementById('nombre')
-    let textlista
-    textlista += `<span class="textlista">${nom_prod}</span>`
+}
+let listado
+
+listado={
+    productos:[]
 }

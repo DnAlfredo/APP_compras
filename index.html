@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./multimedia/imgabs3.webp">
     <link rel="stylesheet" href="./appcompra.css" id="cssdrag">
     <!--<link rel="stylesheet" href="./nuevocss.css">-->
-    
+     <script src="./shoppingjs.js"></script>
     <title>ShoppingList</title>
 </head>
 
@@ -37,7 +37,7 @@
 
                     <div class="productolistado">
                         <input type="checkbox" class="divcheck">
-                        <span class="textlista">texto producto</span>
+                        <span class="textlista"id="textlista">texto producto</span>
                         <div class="botones">
                             <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"
                                 class="botonlista" onclick="muestraLupa()">
@@ -90,9 +90,9 @@
                 <label for="producto">Indica el nombre del alimento a listar:</label>
                 <input type="text" name="producto" placeholder="Nombre del producto..." id="nombre">
                 <label for="cantidad">Cantidad:</label>
-                <input type="range" min="0" max="50" id="cantidad" oninput="muestraCantidad('cantidad','mostrador')"
+                <input type="number" min="0" max="1000" id="cantidad" oninput="muestraCantidad('cantidad','mostrador')"
                     value="0">
-                <span id="mostrador"></span>
+                <!--<span id="mostrador"></span>-->
                 <label for="unidades">Marca la unidad de medida:</label>
                 <input type="radio" id="litros" name="unidades" value="litros">
                 <input type="radio" id="kg" name="unidades" value="kg">
@@ -103,12 +103,20 @@
                 <label for="gr" class="labelradio">gr</label>
                 <label for="ud" class="labelradio">ud.</label>
                 <label for="tienda">Selecciona una tienda:</label>
+                <div id="añadirtienda"onclick="muestraAñadir()">+</div>
+                <div id="desp_tienda"class="esconder">
+                    <label for="tiendanueva">Indica la tienda que quieres añadir:</label>
+                    <input type="text"name="tiendanueva"placeholder="Tienda nueva...">
+                </div>
                 <select id="selecttienda" name="tienda" >  
                 </select>
+                <script>
+                    rellenaSelect()
+                </script>
                 <label for="comentarios">Comentarios:</label>
                 <textarea name="comentarios" rows="10" cols="20" id="textarea" placeholder="Comentarios..."></textarea>
                 <img src="./multimedia/check_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botoncheck"
-                    onclick="validarDatos()">
+                    onclick="creaProducto()">
                 <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botonvisible"
                     onclick=cierraForm()>
 
@@ -116,7 +124,7 @@
         </div>
     </footer>
 
-    <script src="./shoppingjs.js"></script>
+   
 
 </body>
 

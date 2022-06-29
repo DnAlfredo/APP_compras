@@ -310,6 +310,26 @@ footer {
     align-items: center;
 
 }
+#añadirtienda{
+    width: 8vw;
+    height: 3vh;
+    background-color: var(--ficha);
+    border: 1px solid var(--borde);
+    border-radius:5px ;
+    text-align: center;
+    
+}
+#desp_tienda{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+   margin: 1vh;
+   z-index: 2;
+}
 
 #formprod h2 {
     text-align: center;
