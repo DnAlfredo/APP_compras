@@ -29,54 +29,8 @@
     </header>
     <main>
         <div class="listado">
-            <div class="listatienda">
-                <div >
-                    <h3 class="titulotienda">Amica </h3>
-                </div>
-                <div class="cuerpolista">
-
-                    <div class="productolistado">
-                        <input type="checkbox" class="divcheck">
-                        <span class="textlista"id="textlista">texto producto</span>
-                        <div class="botones">
-                            <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"
-                                class="botonlista" onclick="muestraLupa()">
-                            <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"
-                                alt="simbolo de borrar" class="botonlista">
-
-                        </div>
-                        <div id="desplupa" class="esconder">
-                            <span class="cantidadprod">Cantidad: 35 Kg</span>
-                            <span class="comentarioprod">Comentarios: blabla mecmec toctoc</span>
-                            
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="listatienda">
-
-                <h3 class="titulotienda">Espar</h3>
-                <div class="cuerpolista">
-                    <div class="productolistado">
-                        <input type="checkbox" class="divcheck">
-                        <span class="textlista">texto producto</span>
-                        <div class="botones">
-                            <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"
-                                class="botonlista" onclick=>
-                            <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"
-                                alt="simbolo de borrar" class="botonlista">
-                        </div>
-                     
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-        </div>
+            <div class="listatienda"id="producto">
+              </div>
 
     </main>
     <footer>
@@ -90,20 +44,11 @@
                 <label for="producto">Indica el nombre del alimento a listar:</label>
                 <input type="text" name="producto" placeholder="Nombre del producto..." id="nombre">
                 <label for="cantidad">Cantidad:</label>
-                <input type="number" min="0" max="1000" id="cantidad" oninput="muestraCantidad('cantidad','mostrador')"
-                    value="0">
+                <input type="number" min="0" max="1000" id="cantidad"value="0">
                 <!--<span id="mostrador"></span>-->
-                <label for="unidades">Marca la unidad de medida:</label>
-                <input type="radio" id="litros" name="unidades" value="litros">
-                <input type="radio" id="kg" name="unidades" value="kg">
-                <input type="radio" id="gr" name="unidades" value="gr">
-                <input type="radio" id="ud" name="unidades" value="ud">
-                <label for="litros" class="labelradio">litros</label>
-                <label for="kg" class="labelradio">Kg</label>
-                <label for="gr" class="labelradio">gr</label>
-                <label for="ud" class="labelradio">ud.</label>
+                
                 <label for="tienda">Selecciona una tienda:</label>
-                <div id="añadirtienda"onclick="muestraAñadir()">+</div>
+                
                 <div id="desp_tienda"class="esconder">
                     <label for="tiendanueva">Indica la tienda que quieres añadir:</label>
                     <input type="text"name="tiendanueva"placeholder="Tienda nueva...">

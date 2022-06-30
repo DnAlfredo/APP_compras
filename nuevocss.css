@@ -310,15 +310,7 @@ footer {
     align-items: center;
 
 }
-#añadirtienda{
-    width: 8vw;
-    height: 3vh;
-    background-color: var(--ficha);
-    border: 1px solid var(--borde);
-    border-radius:5px ;
-    text-align: center;
-    
-}
+
 #desp_tienda{
     width: 90%;
     flex-wrap: wrap;
@@ -331,26 +323,6 @@ footer {
    z-index: 2;
 }
 
-#formprod h2 {
-    text-align: center;
-    margin-bottom: 0%;
-    margin-top: 0%;
-}
-
-#formprod input[type='radio'] {
-    width: 22%;
-
-
-}
-
-#formprod label[class="labelradio"] {
-    width: 23%;
-    height: 6%;
-    justify-content: space-around;
-    text-align: center;
-    border: 1px solid var(--borde);
-    padding: 0%;
-}
 
 
 #botoncheck {
