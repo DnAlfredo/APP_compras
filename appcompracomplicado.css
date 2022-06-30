@@ -1,0 +1,366 @@
+:root {
+    /*piniendo dos quiones y el nombre que quieras se pueden definir los colores de una web en una sola etiqueta,siendo más fácil para cambiar 
+    toda la paleta de colores en un futuro,OOOOJJJJOOOO mirar como hay que indicar el color en la etiqueta del elemento*/
+    --primario: gray;
+    --secundario: rgba(128, 128, 128, 0.7);
+    --terciario:rgba(128, 128, 128,0.1);
+    --borde:black;
+    --sombra:rgba(0, 0, 0, 0.5);
+    --ficha:gainsboro;
+}
+
+.barramenu {
+    position: sticky;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    background-color: gray;
+    border: 1px solid var(--borde);
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    animation-name: animelogo;
+    animation-duration: 1s;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px var(--sombra) ;
+}
+
+.botonmenu {
+    position: absolute;
+    right: 0.05rem;
+    bottom: 0px;
+    display: flex;
+}
+
+.pngmenu {
+    display: flex;
+    width: 2rem;
+}
+#despmenu{
+    width: 92%;
+    
+    flex-wrap: wrap;
+    justify-content: space-around;
+   align-items: center;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+    margin: 1vh 1vh 1vh  ; 
+    font-size: x-large;
+    
+}
+
+.botondesp{
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);   
+    font-size: x-large;
+    padding: 1vh;
+}
+#despmenu > img{
+    width: 1rem;
+    height: 1rem;  
+    padding: 1vh;
+    right: 0%;
+    bottom: 0%;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);   
+   
+    
+  
+}
+.listado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    min-height: 70vh;
+    /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
+    en la etiqueta principal*/
+    background-color: var(--secundario);
+    border: 1px solid var(--borde);
+    animation-name: animelogo;
+    animation-duration: 1s;
+    border-radius: 10px;
+    padding: 0.3rem;
+
+}
+.textlista{    
+    width: 35%;
+    
+}
+
+.listatienda {
+    display: inline-block;
+    width: 95%;
+    border: 1px solid var(--borde);
+    background-color:var(--ficha) ;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px var(--sombra);
+}
+
+
+.divcheck {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: baseline;
+    /*transform: scale(2);*/
+    
+
+}
+
+.cuerpolista {
+    display: block;
+    text-align: justify;
+    width: auto;
+}
+
+.titulotienda {
+    text-align: center;
+}
+
+.productolistado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: baseline;
+}
+
+.botones {
+    width: 35%;
+}
+.botonlista{
+    width: 2rem;
+}
+#desplupa {
+   width: 90%;
+   
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+   margin: 1vh;
+   z-index: 2;
+}
+.mostrar{
+    display: flex;
+}
+.esconder{
+    display: none;
+}
+.introducir {
+    display: flex;
+    height: 10%;
+    width: 20%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    animation-name: animelogo;
+    animation-duration: 1s;
+    background-color: var(--primario);
+    border: 1px solid var(--borde);
+}
+
+@keyframes animelogo {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0.5;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    15% {
+        opacity: 0.15;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    35% {
+        opacity: 0.35;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    45% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    55% {
+        opacity: 0.55;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    65% {
+        opacity: 0.65;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    85% {
+        opacity: 0.85;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    95% {
+        opacity: 0.95;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundario);
+
+}
+
+#formprod {
+    position: relative;
+    width: 75%;
+    max-height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--primario);
+    margin: 0%;
+    padding: 0%;
+}
+#añadirtienda{
+    width: 6vw;
+    height: 3vh;
+    background-color: var(--ficha);
+    border: 1px solid var(--borde);
+    border-radius:5px ;
+    text-align: center;
+    margin-right: 1vh;
+   
+}
+#desp_tienda{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background-color: var(--secundario);
+    padding: 0.5rem;
+   margin: 1vh;
+   
+}
+
+#formprod label {
+    width: 100%;
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#formprod h2 {
+    text-align: center;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+#formprod input[type='radio'] {
+    width: 22%;
+
+
+}
+
+#formprod label[class="labelradio"] {
+    width: 23%;
+    height: 6%;
+    justify-content: space-around;
+    text-align: center;
+    border: 1px solid var(--borde);
+    padding: 0%;
+}
+
+
+#botoncheck {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    bottom: 0%;
+    left: 0%;
+}
+
+#botonvisible {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    bottom: 0%;
+    right: 0%;
+}
+
+#textarea {
+    width: 80%;
+    max-height: 15vh;
+    margin-bottom: 2.5rem;
+
+}
