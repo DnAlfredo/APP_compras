@@ -111,19 +111,16 @@
     height: 2rem;
     vertical-align: baseline;
     /*transform: scale(2);*/
-    
-
 }
+
 
 .cuerpolista {
     display: block;
     text-align: justify;
     width: auto;
 }
-
-
-
 .productolistado {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -133,20 +130,16 @@
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 2px 2px var(--sombra);
+    margin: 0.5vh;
 }
-
-
-
 .botones {
     width: 35%;
 }
 .botonlista{
     width: 2rem;
 }
-#desplupa {
+.desplupa {
    width: 90%;
-   
-    
     flex-wrap: wrap;
     justify-content: space-between;
     border: 1px solid var(--borde);
@@ -156,6 +149,7 @@
    margin: 1vh;
    z-index: 2;
 }
+
 .mostrar{
     display: flex;
 }

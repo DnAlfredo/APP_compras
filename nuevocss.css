@@ -104,12 +104,8 @@
 
 .listatienda {
     display: inline-block;
-    width: 95%;
-    border: 1px solid var(--borde);
-    background-color: var(--ficha);
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 0.5vh 0.5vh var(--sombra);
+    width: 90%;
+    
 }
 
 
@@ -117,9 +113,7 @@
     width: 2rem;
     height: 2rem;
     vertical-align: baseline;
-    /*transform: scale(2);*/
-    color: var(--secundario);
-
+   
 }
 
 .cuerpolista {
@@ -133,10 +127,16 @@
 }
 
 .productolistado {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    vertical-align: baseline;
+    border: 1px solid var(--borde);
+    background-color:var(--ficha) ;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px var(--sombra);
+    margin: 1vh;
 }
 
 .botones {
@@ -148,21 +148,17 @@
      
 }
 
-#desplupa {
+.desplupa {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     border:0px 0px 1px solid var(--borde);
+    border-radius: 10px;
     box-shadow:0vh  0.5vh 0.5vh var(--sombra);
     background-color: var(--secundario);
     padding: 0.5rem;
-  
+  margin: 1vh;
    z-index: 2;
-}
-#desplupa img{
-    background-color: var(--secundario);
-    box-shadow: 0 0.5vh 0.5vh var(--sombra);
-    border-radius: 5px;
 }
 .introducir {
     display: flex;

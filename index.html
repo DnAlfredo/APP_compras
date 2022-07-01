@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./multimedia/imgabs3.webp">
     <link rel="stylesheet" href="./appcompra.css" id="cssdrag">
     <!--<link rel="stylesheet" href="./nuevocss.css">-->
-     <script src="./shoppingjs.js"></script>
+    <script src="./shoppingjs.js"></script>
     <title>ShoppingList</title>
 </head>
 
@@ -29,8 +29,8 @@
     </header>
     <main>
         <div class="listado">
-            <div class="listatienda"id="producto">
-              </div>
+            <div class="listatienda" id="producto">
+            </div>
 
     </main>
     <footer>
@@ -44,20 +44,18 @@
                 <label for="producto">Indica el nombre del alimento a listar:</label>
                 <input type="text" name="producto" placeholder="Nombre del producto..." id="nombre">
                 <label for="cantidad">Cantidad:</label>
-                <input type="number" min="0" max="1000" id="cantidad"value="0">
+                <input type="number" min="0" max="1000" id="cantidad" value="0">
                 <!--<span id="mostrador"></span>-->
-                
+
                 <label for="tienda">Selecciona una tienda:</label>
-                
-                <div id="desp_tienda"class="esconder">
+
+                <div id="desp_tienda" class="esconder">
                     <label for="tiendanueva">Indica la tienda que quieres añadir:</label>
-                    <input type="text"name="tiendanueva"placeholder="Tienda nueva...">
+                    <input type="text" name="tiendanueva" placeholder="Tienda nueva...">
                 </div>
-                <select id="selecttienda" name="tienda" >  
+                <select id="selecttienda" name="tienda">
                 </select>
-                <script>
-                    rellenaSelect()
-                </script>
+                
                 <label for="comentarios">Comentarios:</label>
                 <textarea name="comentarios" rows="10" cols="20" id="textarea" placeholder="Comentarios..."></textarea>
                 <img src="./multimedia/check_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" id="botoncheck"
@@ -69,8 +67,10 @@
         </div>
     </footer>
 
-   
-
+    <script>
+        rellenaSelect()
+        recuperarArchivos()
+    </script>
 </body>
 
 </html>

@@ -3,8 +3,8 @@ function muestraForm() {
     divgost.style.display = "flex"
 }
 
-function muestraLupa() {
-    let divgoster = document.getElementById('desplupa')
+function muestraLupa(idloca) {
+    let divgoster = document.getElementById(idloca)
     divgoster.classList.toggle('mostrar')
     divgoster.classList.toggle('esconder')
 }
@@ -102,6 +102,15 @@ function creaProducto() {
     let cantidad = document.getElementById('cantidad').value
     let tienda = document.getElementById('selecttienda').value
     let comentarios = document.getElementById('textarea').value
+    if (nom_prod.trim() == "") {
+        limpaForm()
+        return false
+    }
+    if (cantidad <= 0) {
+        limpaForm()
+        return false
+    }
+
     listado.productos.push(
 
         {
@@ -112,50 +121,68 @@ function creaProducto() {
         }
 
     )
-    console.log(listado)
-    //  localStorage.setItem("listado", JSON.stringify(listado))
+    //console.log(listado)
+    localStorage.setItem("listado", JSON.stringify(listado))
     listadoProducto()
     limpaForm()
     cierraForm()
+
 }
+
 function listadoProducto() {
     let producto = document.getElementById("producto")
-    let nom_prod = document.getElementById('nombre').value
-    let tienda = document.getElementById('selecttienda').value
-    let cantidad = document.getElementById('cantidad').value
-    let unidades
-    let col_radios = document.getElementsByName('unidades')
-    for (radiobutton of col_radios) {
-        if (radiobutton.checked) {
-            unidades = radiobutton.value
-        }
-    }
-
-    let comentarios = document.getElementById('textarea').value
     let show_list
 
     show_list =
-         `<div class="cuerpolista">
-             <div class="productolistado">
-                 <input type="checkbox" class="divcheck">
-                 <span class="textlista"id="textlista">${nom_prod}</span>
-                  <div class="botones">
-                     <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"class="botonlista" onclick="muestraLupa()">
-                     <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"alt="simbolo de borrar" class="botonlista">
-                    </div>
-                 <div id="desplupa" class="esconder">
-                     <span class="cantidadprod">Cantidad: ${cantidad}</span>
-                     <span class="comentarioprod">Comentarios: ${comentarios}</span>
-                     <span class="comentarioprod">Tienda: ${tienda}</span>
-                    </div>
-                </div>
-         </div>`
-    producto.innerHTML += show_list
-}
+        `<div class="cuerpolista">`
 
+    for (cromo of listado.productos) {
+        indice=listado.productos.indexOf(cromo)
+        show_list +=
+            `<div class="productolistado">
+                 <input type="checkbox" class="divcheck">
+                 <span class="textlista"id="textlista">${cromo.nombre}</span>
+                  <div class="botones">
+                     <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"class="botonlista" onclick="muestraLupa('lupa_${cromo.nombre}')">
+                     <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"alt="simbolo de borrar" class="botonlista"onclick="avisoBorrado('borra_${cromo.nombre}')">
+                     
+                  </div>
+                  <div id="borra_${cromo.nombre}"class="esconder desplupa">
+                     <span> Cuidado quieres borrar el producto ${cromo.nombre}</span>
+                     <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.png" alt="" class="botonlista"
+                     onclick="muestraLupa('borra_${cromo.nombre}')">
+                     <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"alt="simbolo de borrar" class="botonlista" onclick="borrarProducto('${indice}')">
+                  </div>
+                  <div id='lupa_${cromo.nombre}' class="esconder desplupa">
+                     <span class="cantidadprod">Cantidad: ${cromo.cantidad}</span>
+                     <span class="comentarioprod">Comentarios: ${cromo.comentarios}</span>
+                     <span class="comentarioprod">Tienda: ${cromo.tienda}</span>
+                  </div>
+                </div>`
+    }
+    show_list += `</div>`
+    producto.innerHTML = show_list
+}
+//id="${numRandom()}"prueba de locos
 function recuperarArchivos() {
     if (localStorage.getItem("listado")) {
-         col_productos = localStorage.getItem("listado")
-        col_productos = JSON.parse(col_productos)
+        listado = localStorage.getItem("listado")
+        listado = JSON.parse(listado)
+
+        listadoProducto()
     }
+}
+
+function avisoBorrado(divdell) {
+    let divalert = document.getElementById(divdell)
+    divalert.classList.toggle('esconder')
+    divalert.classList.toggle('mostrar')
+    
+
+}
+function borrarProducto(numdiv) {
+    listado.productos.splice(numdiv,1)
+    localStorage.setItem("listado",JSON.stringify(listado))
+    listadoProducto()
+    // localStorage.removeItem(productdell)
 }
