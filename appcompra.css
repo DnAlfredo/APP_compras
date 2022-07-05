@@ -37,7 +37,7 @@ header{
     background-repeat: no-repeat;
     justify-content: center;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5vh;
     animation-name: animelogo;
     animation-duration: 1s;
     border-radius: 5px;
@@ -59,7 +59,7 @@ header{
 }
 #despmenu{
     width: 92%;
-    
+    height: 50%;
     flex-wrap: wrap;
     justify-content: space-around;
    align-items: center;
@@ -67,7 +67,7 @@ header{
     border-radius: 5px;
     background-color: var(--secundario);
     padding: 0.5rem;
-    margin: 1vh 1vh 1vh  ; 
+    margin:  0.05vh 0.5vh 0.5vh ; 
     font-size: x-large;
     background-image: url(./multimedia/industria2.jpg);
     background-size: 100% 100% ;
