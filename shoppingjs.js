@@ -164,7 +164,7 @@ function listadoProducto() {
                      
                   </div>
                   <div id="borra_${cromo.nombre}"class="esconder desplupa">
-                     <span> Cuidado quieres borrar el producto ${cromo.nombre}</span>
+                     <span> Cuidado!! Quieres borrar el producto <span style="color:red;">${cromo.nombre}</span></span>
                      <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.svg" alt="" class="botonlista"
                      onclick="muestraLupa('borra_${cromo.nombre}')">
                      <img src="./multimedia/delete.svg"alt="simbolo de borrar" class="botonlista" onclick="borrarProducto('${indice}')">
