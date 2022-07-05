@@ -2,11 +2,12 @@
     /*piniendo dos quiones y el nombre que quieras se pueden definir los colores de una web en una sola etiqueta,siendo más fácil para cambiar 
     toda la paleta de colores en un futuro,OOOOJJJJOOOO mirar como hay que indicar el color en la etiqueta del elemento*/
     --primario: gray;
-    --secundario: rgba(128, 128, 128, 0.7);
+    --secundario:rgba(184, 150, 20,0.5);
     --terciario:rgba(128, 128, 128,0.1);
     --borde:black;
     --sombra:rgba(0, 0, 0, 0.5);
     --ficha:gainsboro;
+    /*rgba(128, 128, 128, 0.7) */
 }
 *{
     margin:0%;
@@ -30,6 +31,10 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+   
+}
+header h1{
+    color:darkgoldenrod;
 }
 .barramenu {
     position: sticky;
@@ -43,6 +48,7 @@ header{
     background-repeat: no-repeat;
     justify-content: center;
     text-align: center;
+    padding: 0.9vh;
     margin-bottom: 0.5vh;
     animation-name: animelogo;
     animation-duration: 1s;
@@ -106,7 +112,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     height: 100%;
-    min-height: 70vh;
+    min-height: 82vh;
     /*poniendo lo de var con parentesis le indicamos que vamos a usar un color predeterminado,entre parentesis se pone el nombre definido 
     en la etiqueta principal*/
     background-image: url(./multimedia/industrial_texture687.jpg );
