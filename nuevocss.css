@@ -269,7 +269,7 @@ body{
 footer {
     width: 100%;
     display: flex;
-    background-image: linear-gradient(to left, red , yellow);
+    background-image: linear-gradient(to left, red ,orange);
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -302,7 +302,7 @@ footer {
     align-items: center;
     border: 1px solid var(--borde);
     border-radius: 5px;
-    background-color: var(--primario);
+    background-image:radial-gradient(orange , red);
     margin: 0%;
     padding: 0%;
 }
