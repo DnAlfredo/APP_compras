@@ -151,15 +151,15 @@ function listadoProducto() {
                  <input type="checkbox" class="divcheck"onchange="actualizaCheck(${indice})"id="chk_${cromo.nombre}"${checkado}>
                  <span class="textlista"id="textlista">${cromo.nombre}</span>
                   <div class="botones">
-                     <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"class="botonlista" onclick="muestraLupa('lupa_${cromo.nombre}')">
-                     <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"alt="simbolo de borrar" class="botonlista"onclick="avisoBorrado('borra_${cromo.nombre}')">
+                     <img src="./multimedia/lupa.svg" alt="lupa de busqueda"class="botonlista" onclick="muestraLupa('lupa_${cromo.nombre}')">
+                     <img src="./multimedia/delete.svg"alt="simbolo de borrar" class="botonlista"onclick="avisoBorrado('borra_${cromo.nombre}')">
                      
                   </div>
                   <div id="borra_${cromo.nombre}"class="esconder desplupa">
                      <span> Cuidado quieres borrar el producto ${cromo.nombre}</span>
                      <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.png" alt="" class="botonlista"
                      onclick="muestraLupa('borra_${cromo.nombre}')">
-                     <img src="./multimedia/delete_forever_FILL0_wght400_GRAD0_opsz48.png"alt="simbolo de borrar" class="botonlista" onclick="borrarProducto('${indice}')">
+                     <img src="./multimedia/delete.svg"alt="simbolo de borrar" class="botonlista" onclick="borrarProducto('${indice}')">
                   </div>
                   <div id='lupa_${cromo.nombre}' class="esconder desplupa">
                      <span class="cantidadprod">Cantidad: ${cromo.cantidad}</span>
