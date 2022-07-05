@@ -57,25 +57,33 @@ function cierraMenu() {
 
 function cambiaInterfaz() {
     document.getElementById("cssdrag").href = "./nuevocss.css"
+    cierraMenu()
 }
 
 function cambiaColores() {
     document.getElementById("cssdrag").href = "./appcompra.css"
+    cierraMenu()
 }
 
 let col_tienda;
 col_tienda = {
     tienda: [{
-            nombre: "Amica"
+            nombre: "Mercadona"
         },
         {
-            nombre: "Espar"
+            nombre: "Lidl"
         },
         {
-            nombre: "Simago"
+            nombre: "MasyMas"
         },
         {
-            nombre: "Continente"
+            nombre: "Consum"
+        },
+        {
+            nombre:"Aldi"
+        },
+        {
+            nombre:"FamilyCash"
         }
     ]
 
@@ -157,7 +165,7 @@ function listadoProducto() {
                   </div>
                   <div id="borra_${cromo.nombre}"class="esconder desplupa">
                      <span> Cuidado quieres borrar el producto ${cromo.nombre}</span>
-                     <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.png" alt="" class="botonlista"
+                     <img src="./multimedia/disabled_visible_FILL0_wght400_GRAD0_opsz48.svg" alt="" class="botonlista"
                      onclick="muestraLupa('borra_${cromo.nombre}')">
                      <img src="./multimedia/delete.svg"alt="simbolo de borrar" class="botonlista" onclick="borrarProducto('${indice}')">
                   </div>

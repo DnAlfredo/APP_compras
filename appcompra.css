@@ -47,7 +47,6 @@ header{
 .botonmenu {
     position: absolute;
     width: 0.5 rem;
-    right: 0.08rem;
     bottom: 0px;
     display: flex;
 
@@ -56,6 +55,7 @@ header{
 .pngmenu {
     display: flex;
     width: 2rem;
+    color: var(--primario);
 }
 #despmenu{
     width: 92%;
@@ -160,7 +160,7 @@ header{
     margin: 0.5vh;
     background-image: url(./multimedia/industria6.jpg);
     background-size: 100% 100% ;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 .botones {
     width: 35%;
@@ -191,7 +191,7 @@ header{
     border-radius: 10px;
     animation-name: animelogo;
     animation-duration: 1s;
-    background-color: var(--primario);
+   
     border: 1px solid var(--borde);
     background-image: url(./multimedia/industria2.jpg);
     background-size: 100% 100% ;
@@ -319,7 +319,7 @@ footer {
     align-items: center;
     border: 1px solid var(--borde);
     border-radius: 10px;
-    background-color: var(--primario);
+    background-color: var(--secundario);
     margin: 0%;
     padding: 0%;
 }
@@ -358,6 +358,7 @@ footer {
     height: 3rem;
     bottom: 0%;
     left: 0%;
+    color: var(--primario);
 }
 
 #botonvisible {
