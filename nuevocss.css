@@ -12,6 +12,11 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
+header,
+main,
+footer{
+    display:block;
+}
 .mostrar {
     display: flex;
     justify-content: space-around;
@@ -276,7 +281,7 @@ footer {
     top: 0%;
     left: 0%;
     z-index: 2;
-    display: none;
+    
     justify-content: center;
     align-items: center;
     background-color: var(--terciario);

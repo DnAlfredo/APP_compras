@@ -1,6 +1,7 @@
 function muestraForm() {
     let divgost = document.getElementById('modal')
     divgost.style.display = "flex"
+    
 }
 
 function muestraLupa(idloca) {

@@ -8,7 +8,23 @@
     --sombra:rgba(0, 0, 0, 0.5);
     --ficha:gainsboro;
 }
-
+header,
+main,
+footer{
+    display:block;
+}
+.mostrar{
+    display: flex;
+}
+.esconder{
+    display: none;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .barramenu {
     position: sticky;
     width: 100%;
@@ -16,6 +32,7 @@
     display: flex;
     background-color: gray;
     border: 1px solid var(--borde);
+    
     justify-content: center;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -150,12 +167,7 @@
    z-index: 2;
 }
 
-.mostrar{
-    display: flex;
-}
-.esconder{
-    display: none;
-}
+
 .introducir {
     display: flex;
     height: 10%;
@@ -270,7 +282,7 @@ footer {
     top: 0%;
     left: 0%;
     z-index: 2;
-    display: none;
+    
     justify-content: center;
     align-items: center;
     background-color: var(--secundario);
