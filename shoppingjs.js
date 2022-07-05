@@ -117,7 +117,9 @@ function creaProducto() {
             nombre: nom_prod,
             cantidad: cantidad,
             tienda: tienda,
-            comentarios: comentarios
+            comentarios: comentarios,
+            comprado: false
+
         }
 
     )
@@ -132,15 +134,20 @@ function creaProducto() {
 function listadoProducto() {
     let producto = document.getElementById("producto")
     let show_list
-
+    let checkado=""
     show_list =
         `<div class="cuerpolista">`
 
     for (cromo of listado.productos) {
-        indice=listado.productos.indexOf(cromo)
+        indice = listado.productos.indexOf(cromo)
+        if(cromo.comprado){
+         checkado="checked"
+        }else{
+            checkado=""
+        }
         show_list +=
             `<div class="productolistado">
-                 <input type="checkbox" class="divcheck">
+                 <input type="checkbox" class="divcheck"onchange="actualizaCheck(${indice})"id="chk_${cromo.nombre}"${checkado}>
                  <span class="textlista"id="textlista">${cromo.nombre}</span>
                   <div class="botones">
                      <img src="./multimedia/search_FILL0_wght400_GRAD0_opsz48.png" alt="lupa de busqueda"class="botonlista" onclick="muestraLupa('lupa_${cromo.nombre}')">
@@ -163,7 +170,7 @@ function listadoProducto() {
     show_list += `</div>`
     producto.innerHTML = show_list
 }
-//id="${numRandom()}"prueba de locos
+
 function recuperarArchivos() {
     if (localStorage.getItem("listado")) {
         listado = localStorage.getItem("listado")
@@ -172,17 +179,22 @@ function recuperarArchivos() {
         listadoProducto()
     }
 }
+function actualizaCheck(indice) {
+    listado.productos[indice].comprado= ! listado.productos[indice].comprado
+    localStorage.setItem("listado", JSON.stringify(listado))
 
+}
 function avisoBorrado(divdell) {
     let divalert = document.getElementById(divdell)
     divalert.classList.toggle('esconder')
     divalert.classList.toggle('mostrar')
-    
+
 
 }
+
 function borrarProducto(numdiv) {
-    listado.productos.splice(numdiv,1)
-    localStorage.setItem("listado",JSON.stringify(listado))
+    listado.productos.splice(numdiv, 1)
+    localStorage.setItem("listado", JSON.stringify(listado))
     listadoProducto()
     // localStorage.removeItem(productdell)
 }
